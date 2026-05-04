@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jana & Bassel - Wedding Invitation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="invitation-wrapper">
+        <div class="envelope" id="envelope">
+            <div class="envelope-title" style="font-family: Brush Script MT;">Jana & Bassel</div>
+            <div class="envelope-back"></div>
+            
+            <div class="letter" id="letter">
+                <button class="close-btn" id="close-btn">&times;</button>
+                <div class="letter-content">
+                    <h2 class="pre-title">You're invited!</h2>
+                    <h1 class="title" style="font-family: Brush Script MT;">Jana & Bassel</h1>
+                    
+                    <div class="navigation">
+                        <button class="nav-btn active" data-target="details">Details</button>
+                        <button class="nav-btn" data-target="location">Location</button>
+                        <button class="nav-btn" data-target="save-the-date">Save the Date</button>
+                        <button class="nav-btn" data-target="timeline">Event Timeline</button>
+                        <button class="nav-btn" data-target="faq">FAQ</button>
+                    </div>
+
+                    <div class="pages">
+                        <div class="page active" id="details">
+                            <h3>Event Details</h3>
+                            <p>We are thrilled to invite you to celebrate our special day with us. Join us for a night of joy, dancing, and memories.</p>
+                            <p><strong>Dress Code:</strong> Black Tie Preferred</p>
+                        </div>
+                        <div class="page" id="location">
+                            <h3>Location</h3>
+                            <p><strong>Dusit Hotel Hall 1</strong></p>
+                            <p>North Tesein Street</p>
+                            <p>New Cairo, Dusit</p>
+                        </div>
+                        <div class="page" id="save-the-date">
+                            <h3>Save the Date</h3>
+                            <p><strong>Saturday, August 25th, 2026</strong></p>
+                            <p>Please mark your calendars!</p>
+                        </div>
+                        <div class="page" id="timeline">
+                            <h3>Event Timeline</h3>
+                            <ul class="timeline-list">
+                                <li><span>5:00 PM</span> Guest Arrival</li>
+                                <li><span>6:00 PM</span> Wedding Ceremony</li>
+                                <li><span>7:30 PM</span> Dinner Reception</li>
+                                <li><span>9:00 PM</span> Cake Cutting & Dancing</li>
+                            </ul>
+                        </div>
+                        <div class="page" id="faq">
+                            <h3>FAQ</h3>
+                            <p><strong>Can I bring a plus one?</strong><br>Please refer to your physical invitation envelope.</p>
+                            <p><strong>Is there parking available?</strong><br>Yes, complimentary valet parking is provided.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="envelope-front">
+                <div class="envelope-left"></div>
+                <div class="envelope-right"></div>
+                <div class="envelope-bottom"></div>
+            </div>
+            
+            <div class="envelope-flap" id="flap"></div>
+            
+            <div class="stamp" id="stamp">
+                <span class="stamp-text">Open</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
