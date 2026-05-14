@@ -19,44 +19,74 @@
                     <h2 class="pre-title">You're invited!</h2>
                     <h1 class="title" style="font-family: Brush Script MT;">Jana & Bassel</h1>
                     
-                    <div class="navigation">
-                        <button class="nav-btn active" data-target="details">Details</button>
-                        <button class="nav-btn" data-target="location">Location</button>
-                        <button class="nav-btn" data-target="save-the-date">Save the Date</button>
-                        <button class="nav-btn" data-target="timeline">Event Timeline</button>
-                        <button class="nav-btn" data-target="faq">FAQ</button>
+                    <div class="options-grid">
+                        <div class="option-box" data-target="details">
+                            <span class="option-title">Details</span>
+                        </div>
+                        <div class="option-box" data-target="location">
+                            <span class="option-title">Location</span>
+                        </div>
+                        <div class="option-box" data-target="save-the-date">
+                            <span class="option-title">Save the Date</span>
+                        </div>
+                        <div class="option-box" data-target="timeline">
+                            <span class="option-title">Timeline</span>
+                        </div>
+                        <div class="option-box" data-target="faq">
+                            <span class="option-title">FAQ</span>
+                        </div>
                     </div>
 
-                    <div class="pages">
-                        <div class="page active" id="details">
-                            <h3>Event Details</h3>
-                            <p>We are thrilled to invite you to celebrate our special day with us. Join us for a night of joy, dancing, and memories.</p>
-                            <p><strong>Dress Code:</strong> Black Tie Preferred</p>
-                        </div>
-                        <div class="page" id="location">
-                            <h3>Location</h3>
-                            <p><strong>Dusit Hotel Hall 1</strong></p>
-                            <p>North Tesein Street</p>
-                            <p>New Cairo, Dusit</p>
-                        </div>
-                        <div class="page" id="save-the-date">
-                            <h3>Save the Date</h3>
-                            <p><strong>Saturday, August 25th, 2026</strong></p>
-                            <p>Please mark your calendars!</p>
-                        </div>
-                        <div class="page" id="timeline">
-                            <h3>Event Timeline</h3>
-                            <ul class="timeline-list">
-                                <li><span>5:00 PM</span> Guest Arrival</li>
-                                <li><span>6:00 PM</span> Wedding Ceremony</li>
-                                <li><span>7:30 PM</span> Dinner Reception</li>
-                                <li><span>9:00 PM</span> Cake Cutting & Dancing</li>
-                            </ul>
-                        </div>
-                        <div class="page" id="faq">
-                            <h3>FAQ</h3>
-                            <p><strong>Can I bring a plus one?</strong><br>Please refer to your physical invitation envelope.</p>
-                            <p><strong>Is there parking available?</strong><br>Yes, complimentary valet parking is provided.</p>
+                    <div class="popup-container" id="popup-container">
+                        <div class="popup-box">
+                            <button class="popup-close-btn" id="popup-close-btn">&times;</button>
+                            <div class="pages">
+                                <div class="page" id="details">
+                                    <h3>Event Details</h3>
+                                    <p><strong>Dress code:</strong> Formal attire, we would love to see you in bright, colorful tones.</p>
+                                </div>
+                                <div class="page" id="location">
+                                    <h3>Location</h3>
+                                    <p><strong>The Westin Cairo Golf Resort & Spa</strong></p>
+                                    <p>Katameya Dunes</p>
+                                    <p>The Grand Ballroom</p>
+                                    <a href="https://maps.app.goo.gl/HGeneZZkS2Mdo9eY8?g_st=ic
+" target="_blank" class="maps-link">
+                                        <span class="maps-icon">📍</span> Open in Google Maps
+                                    </a>
+                                </div>
+                                <div class="page" id="save-the-date">
+                                    <h3>Save the Date</h3>
+                                    <p><strong>Saturday, August 25th, 2026</strong></p>
+                                    <p>Please mark your calendars!</p>
+                                </div>
+                                <div class="page" id="timeline">
+                                    <h3>Event Timeline</h3>
+                                    <ul class="timeline-list">
+                                        <li><span>6:00 PM</span> Zaffa Arrival</li>
+                                        <li><span>8:00 PM</span> The Celebration Continues...</li>
+                                        <li><span>10:00 PM</span> End of Celebration</li>
+                                    </ul>
+                                </div>
+                                <div class="page" id="faq">
+                                    <h3>FAQ</h3>
+                                    <p><strong>What time should I arrive?
+</strong><br>We recommend arriving by 5:30 PM so you can enjoy the zaffa and not miss the start of the celebration.</p>
+                                    <p><strong>Where is the wedding taking place?
+</strong><br>The celebration will be held at The Westin Hotel - The Grand Ballroom - details and location are shared with your invitation.</p>
+                                    <p><strong>Is there a dress code?</strong><br>Formal attire with a colorful twist we’d love to see you in vibrant, joyful tones.</p>
+                                    <p><strong>Will the evening start on time?
+</strong><br>Yes, the zaffa will begin right on time, and we’d love for you to be part of it from the very first moment.</p>
+                                    <p><strong>Will food be served?
+</strong><br>Yes, a buffet dinner will be available during the evening for you to enjoy.</p>
+                                    <p><strong>Can I bring a plus one?
+</strong><br>Due to limited seating, invitations are reserved for those listed.</p>
+                                    <p><strong>Are children invited?
+</strong><br>We love your little ones, however this will be an adults-only celebration.</p>
+                                    <p><strong>Is parking available?
+</strong><br>Yes, parking & valet will be available at the venue for your convenience.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -71,7 +101,7 @@
             <div class="envelope-flap" id="flap"></div>
             
             <div class="stamp" id="stamp">
-                <span class="stamp-text">Open</span>
+                <img src="J&B LOGO.jpeg" alt="Upload your stamp here" class="stamp-image" id="stamp-image" onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'stamp-text\'>Upload<br>Stamp</span>';">
             </div>
         </div>
     </div>
