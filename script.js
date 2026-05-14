@@ -30,6 +30,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 targetPage.classList.add('active');
             }
 
+            // Hide scrollbar if countdown to prevent the gold scrollbar from appearing
+            const pagesContainer = document.querySelector('.pages');
+            if (targetId === 'countdown') {
+                pagesContainer.style.overflow = 'hidden';
+            } else {
+                pagesContainer.style.overflow = '';
+            }
+
             // Show popup
             popupContainer.classList.add('active');
         });
@@ -39,4 +47,40 @@ document.addEventListener('DOMContentLoaded', () => {
     popupCloseBtn.addEventListener('click', () => {
         popupContainer.classList.remove('active');
     });
+
+    // Countdown Timer Logic
+    const targetDate = new Date('August 25, 2026 00:00:00').getTime();
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const difference = targetDate - now;
+
+        if (difference > 0) {
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            const daysEl = document.getElementById('cd-days');
+            if (daysEl) {
+                daysEl.innerText = days < 10 ? '0' + days : days;
+                document.getElementById('cd-hours').innerText = hours < 10 ? '0' + hours : hours;
+                document.getElementById('cd-minutes').innerText = minutes < 10 ? '0' + minutes : minutes;
+                document.getElementById('cd-seconds').innerText = seconds < 10 ? '0' + seconds : seconds;
+            }
+        } else {
+            // Target date has passed
+            const daysEl = document.getElementById('cd-days');
+            if (daysEl) {
+                daysEl.innerText = "00";
+                document.getElementById('cd-hours').innerText = "00";
+                document.getElementById('cd-minutes').innerText = "00";
+                document.getElementById('cd-seconds').innerText = "00";
+            }
+        }
+    }
+
+    // Update countdown every second
+    setInterval(updateCountdown, 1000);
+    updateCountdown(); // initial call
 });
