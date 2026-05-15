@@ -6,6 +6,7 @@
     <title>Jana & Bassel - Wedding Invitation</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
 <body>
     <div class="invitation-wrapper">
@@ -29,11 +30,11 @@
                         <button class="option-box" data-target="location">
                             <span class="option-title">Location</span>
                         </button>
-                        <button class="option-box" data-target="timeline">
-                            <span class="option-title">Timeline</span>
-                        </button>
                         <button class="option-box" data-target="faq">
                             <span class="option-title">FAQ</span>
+                        </button>
+                        <button class="option-box" data-target="rsvp">
+                            <span class="option-title">RSVP</span>
                         </button>
                     </div>
 
@@ -44,6 +45,12 @@
                                 <div class="page" id="details">
                                     <h3>Event Details</h3>
                                     <p><strong>Dress code:</strong> Formal attire, we would love to see you in bright, colorful tones.</p>
+                                    <h3>Event Timeline</h3>
+                                    <ul class="timeline-list">
+                                        <li><span>6:00 PM</span> Zaffa Arrival</li>
+                                        <li><span>8:00 PM</span> The Celebration Continues...</li>
+                                        <li><span>10:00 PM</span> End of Celebration</li>
+                                    </ul>
                                 </div>
                                 <div class="page" id="location">
                                     <h3>Location</h3>
@@ -55,19 +62,7 @@
                                         <span class="maps-icon">📍</span> Open in Google Maps
                                     </a>
                                 </div>
-                                <div class="page" id="save-the-date">
-                                    <h3>Save the Date</h3>
-                                    <p><strong>Saturday, August 15th, 2026</strong></p>
-                                    <p>Please mark your calendars!</p>
-                                </div>
-                                <div class="page" id="timeline">
-                                    <h3>Event Timeline</h3>
-                                    <ul class="timeline-list">
-                                        <li><span>6:00 PM</span> Zaffa Arrival</li>
-                                        <li><span>8:00 PM</span> The Celebration Continues...</li>
-                                        <li><span>10:00 PM</span> End of Celebration</li>
-                                    </ul>
-                                </div>
+
                                 <div class="page" id="faq">
                                     <h3>FAQ</h3>
                                     <p><strong>What time should I arrive?
@@ -107,6 +102,26 @@
                                             <p>Seconds</p>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="page" id="rsvp">
+                                    <h3>RSVP</h3>
+                                    <p>Let us know who is coming and if you would like to bring a plus one.</p>
+                                    <form id="rsvp-form" class="rsvp-form">
+                                        <div class="form-row">
+                                            <label for="guest-name">Your Name</label>
+                                            <input type="text" id="guest-name" name="guestName" placeholder="Enter your name" required>
+                                        </div>
+                                        <div class="form-row form-checkbox">
+                                            <input type="checkbox" id="plus-one-toggle">
+                                            <label for="plus-one-toggle">I am bringing a plus one</label>
+                                        </div>
+                                        <div class="form-row plus-one-row hidden" id="plus-one-row">
+                                            <label for="plus-one-name">Plus One Name</label>
+                                            <input type="text" id="plus-one-name" name="plusOneName" placeholder="Enter plus one name">
+                                        </div>
+                                        <button type="submit" class="rsvp-submit">Send RSVP</button>
+                                        <p class="rsvp-notice">After submitting, your default mail app will open so you can send a confirmation email.</p>
+                                    </form>
                                 </div>
                             </div>
                         </div>

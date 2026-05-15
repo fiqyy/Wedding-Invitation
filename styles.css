@@ -604,6 +604,76 @@ body::before {
     color: #4a362f;
 }
 
+.rsvp-form {
+    max-width: 520px;
+    margin: 0 auto;
+    display: grid;
+    gap: 18px;
+    text-align: left;
+}
+
+.form-row {
+    display: grid;
+    gap: 8px;
+}
+
+.form-row label {
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    color: #523c31;
+    font-weight: 700;
+}
+
+.rsvp-form input[type="text"] {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 14px;
+    border: 1px solid rgba(137, 91, 70, 0.25);
+    background: rgba(255, 255, 255, 0.96);
+    color: #4d3b31;
+    font-size: 15px;
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.form-checkbox input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent-brown);
+}
+
+.plus-one-row.hidden {
+    display: none;
+}
+
+.rsvp-submit {
+    background: linear-gradient(135deg, rgba(191, 135, 96, 0.95), rgba(144, 88, 62, 0.96));
+    color: white;
+    border: none;
+    border-radius: 16px;
+    padding: 14px 0;
+    font-family: 'Cinzel', serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rsvp-submit:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 30px rgba(116, 68, 46, 0.28);
+}
+
+.rsvp-notice {
+    font-size: 14px;
+    color: #5d4337;
+    margin-top: 8px;
+}
+
 .timeline-list {
     list-style: none;
     max-width: 350px;

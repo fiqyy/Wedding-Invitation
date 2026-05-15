@@ -6,6 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.getElementById('close-btn');
     const popupContainer = document.getElementById('popup-container');
     const popupCloseBtn = document.getElementById('popup-close-btn');
+    const rsvpForm = document.getElementById('rsvp-form');
+    const plusOneToggle = document.getElementById('plus-one-toggle');
+    const plusOneRow = document.getElementById('plus-one-row');
+    const plusOneInput = document.getElementById('plus-one-name');
+
+    // The Email Address to receive RSVP confirmations
+    const RSVP_EMAIL = 'j.elghorab@gmail.com';
 
     // Open envelope when clicking the stamp
     stamp.addEventListener('click', () => {
@@ -45,6 +52,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Close popup
     popupCloseBtn.addEventListener('click', () => {
+        popupContainer.classList.remove('active');
+    });
+
+    // Show or hide the plus one input
+    plusOneToggle.addEventListener('change', () => {
+        plusOneRow.classList.toggle('hidden', !plusOneToggle.checked);
+        if (!plusOneToggle.checked) {
+            plusOneInput.value = '';
+        }
+    });
+
+    // Submit RSVP form
+    rsvpForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const guestName = document.getElementById('guest-name').value.trim();
+        const plusOneName = plusOneInput.value.trim();
+
+        if (!guestName) {
+            alert('Please enter your name before sending your RSVP.');
+            return;
+        }
+
+        if (!RSVP_EMAIL || RSVP_EMAIL === 'your-email@gmail.com') {
+            alert('Please update the RSVP_EMAIL value inside script.js with your Gmail address.');
+            return;
+        }
+
+        const plusOneText = plusOneName ? plusOneName : (plusOneToggle.checked ? 'Yes' : 'No');
+        const subject = encodeURIComponent('Wedding RSVP Confirmation');
+        let bodyText = `Someone confirmed coming to your wedding!!\n\nName: ${guestName}`;
+        bodyText += plusOneName ? `\nPlus one: ${plusOneName}` : (plusOneToggle.checked ? '\nPlus one: Yes' : '\nPlus one: No');
+        const mailtoLink = `mailto:${RSVP_EMAIL}?subject=${subject}&body=${encodeURIComponent(bodyText)}`;
+        window.location.href = mailtoLink;
         popupContainer.classList.remove('active');
     });
 
