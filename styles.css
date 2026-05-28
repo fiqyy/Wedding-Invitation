@@ -51,7 +51,7 @@ body {
 .envelope {
     position: relative;
     width: min(100%, 650px);
-    max-width: 650px;
+    max-width: 640px;
     height: 420px;
     background-color: transparent; /* Make the envelope background transparent */
     border: none;
@@ -760,7 +760,7 @@ body {
 
     .envelope {
         width: min(100%, 520px);
-        max-width: 520px;
+        max-width: 500px;
         height: 270px;
         margin: 0 auto;
     }
