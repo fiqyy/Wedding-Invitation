@@ -1,11 +1,14 @@
 :root {
-    --primary-dark: #413333;
+    --primary-dark: linear-gradient(135deg, 
+    rgba(65, 51, 51, 0.15) 0%, 
+    rgba(79, 61, 63, 0.1) 50%, 
+    rgba(179, 120, 93, 0.05) 100%);
     --secondary-dark: #4f3d3f;
     --accent-brown: #b3785d;
     --light-gray: #f2e7df;
     --off-white: #f9f1eb;
     --subtle-gold: #d4af37;
-    --letter-text: #3b2a27;
+    --letter-text: #252b4b;
     --title-text: #7f4c3b;
     --button-bg: rgba(255, 255, 255, 0.78);
     --card-bg: rgba(249, 241, 235, 0.92);
@@ -18,12 +21,11 @@
 }
 
 body {
-    background: rgb(126, 120, 120);
+    background-image: url('darkbackground.PNG');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-blend-mode: overlay;
     font-family: 'Playfair Display', serif;
     color: var(--letter-text);
     display: flex;
@@ -34,20 +36,7 @@ body {
     position: relative;
 }
 
-body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    background-image:
-        radial-gradient(circle at 10% 10%, rgba(255, 220, 205, 0.40), transparent 8%),
-        radial-gradient(circle at 85% 8%, rgba(255, 245, 225, 0.30), transparent 10%),
-        radial-gradient(circle at 25% 85%, rgba(255, 235, 245, 0.25), transparent 11%),
-        radial-gradient(circle at 70% 70%, rgba(225, 200, 210, 0.22), transparent 9%);
-    opacity: 0.8;
-    mix-blend-mode: screen;
-    z-index: 0;
-}
+
 
 .invitation-wrapper {
     position: relative;
@@ -64,7 +53,7 @@ body::before {
     width: min(100%, 650px);
     max-width: 650px;
     height: 420px;
-    background-color: transparent;
+    background-color: transparent; /* Make the envelope background transparent */
     border-radius: 5px;
     transition: transform 2s ease-in-out, margin-top 2s ease-in-out;
     transform-style: preserve-3d;
@@ -78,8 +67,7 @@ body::before {
     width: 108px;
     height: 108px;
     border-radius: 50%;
-    background: radial-gradient(circle at 40% 40%, rgba(255, 245, 235, 0.95), transparent 45%),
-                radial-gradient(circle at 65% 65%, rgba(179, 120, 93, 0.35), transparent 30%);
+    background-image: url('/Users/fiqy/Documents/Wedding Invitation/westin background.PNG');
     filter: blur(0.5px);
     z-index: 1;
 }
@@ -92,8 +80,7 @@ body::before {
     width: 96px;
     height: 96px;
     border-radius: 50%;
-    background: radial-gradient(circle at 35% 35%, rgba(255, 230, 220, 0.92), transparent 48%),
-                radial-gradient(circle at 68% 68%, rgba(255, 215, 215, 0.35), transparent 28%);
+    background-image: url('/Users/fiqy/Documents/Wedding Invitation/westin background.PNG');
     filter: blur(0.5px);
     z-index: 1;
 }
@@ -107,7 +94,9 @@ body::before {
     background-color: var(--primary-dark);
     border-radius: 5px;
     z-index: 1;
-    box-shadow: 0 20px 60px rgba(39, 43, 54, 0.9), inset 0 0 20px rgba(89, 93, 102, 0.3);
+    box-shadow: 0 20px 60px rgba(39, 43, 54, 0.9), inset 0 0 20px rgba(89, 93, 102, 0.3), 
+    inset 0 0 20px rgba(89, 93, 102, 0.2), 
+    inset 0 0 40px rgba(0, 0, 0, 0.1);
 }
 
 .letter {
@@ -116,7 +105,10 @@ body::before {
     left: 20px;
     right: 20px;
     height: 400px;
-    background: var(--card-bg);
+    background-image: url('westinlighter.PNG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 18px;
     z-index: 2;
@@ -137,7 +129,7 @@ body::before {
     left: 50%;
     transform: translateX(-50%);
     font-size: 34px;
-    color: rgba(179, 120, 93, 0.88);
+    color: var(--letter-text);
     text-shadow: 0 2px 8px rgba(255, 255, 255, 0.65);
     z-index: 4;
 }
@@ -150,7 +142,7 @@ body::before {
     transform: translateX(-50%);
     width: 132px;
     height: 2px;
-    background: linear-gradient(90deg, transparent, rgba(179, 120, 93, 0.75), transparent);
+    background-image: url('/Users/fiqy/Documents/Wedding Invitation/background.jpeg');
     z-index: 4;
     opacity: 0.95;
 }
@@ -159,7 +151,7 @@ body::before {
     text-align: center;
     font-family: 'Cinzel', serif;
     font-size: 16px;
-    color: var(--accent-brown);
+    color: var(--letter-text);
     margin-top: 50px;
     margin-bottom: 8px;
     text-transform: uppercase;
@@ -346,7 +338,7 @@ body::before {
     text-align: center;
     font-family: 'Cinzel', serif;
     font-size: 16px;
-    color: var(--accent-brown);
+    color: var(--letter-text);
     margin-bottom: 8px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -355,7 +347,7 @@ body::before {
 .title {
     text-align: center;
     font-size: 42px;
-    color: var(--title-text);
+    color: var(--letter-text);
     margin-bottom: 25px;
     font-weight: normal;
     text-shadow: 0 4px 12px rgba(255, 255, 255, 0.35);
@@ -761,7 +753,7 @@ body::before {
     .envelope {
         width: min(100%, 520px);
         max-width: 520px;
-        height: 380px;
+        height: 270px;
         margin: 0 auto;
     }
 
@@ -774,9 +766,9 @@ body::before {
         top: 10px;
         left: 12px;
         right: 12px;
-        height: 360px;
-        min-height: 360px;
-        padding: 28px 18px;
+        height: 260px;
+        min-height: 260px;
+        padding: 18px 18px;
     }
 
     .letter::before {
