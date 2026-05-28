@@ -812,11 +812,12 @@ body {
     .title {
         font-size: 30px;
         margin-bottom: 18px;
-        font-family: "Lora", serif;
+        font-family: "Lora", cursive;
     }
 
     .pre-title {
         font-size: 14px;
+        font-family: "Lora", cursive;
     }
 
     .options-grid {
