@@ -54,9 +54,11 @@ body {
     max-width: 650px;
     height: 420px;
     background-color: transparent; /* Make the envelope background transparent */
-    border-radius: 5px;
+    border: none;
+    border-radius: 0px;
     transition: transform 2s ease-in-out, margin-top 2s ease-in-out;
     transform-style: preserve-3d;
+    box-shadow: none;
 }
 
 .envelope::before {
@@ -91,10 +93,11 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--primary-dark);
-    border-radius: 5px;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
     z-index: 1;
-    box-shadow: 0 20px 60px rgba(39, 43, 54, 0.9), inset 0 0 20px rgba(89, 93, 102, 0.3);
+    box-shadow: none;
 }
 
 .letter {
@@ -207,7 +210,7 @@ body {
 
 .stamp {
     position: absolute;
-    top: 50%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100px;
@@ -251,7 +254,7 @@ body {
     width: 100%;
     text-align: center;
     font-family: 'Great Vibes', cursive;
-    font-size: 34px;
+    font-size: 20px;
     color: var(--off-white);
     z-index: 6;
     pointer-events: none;
