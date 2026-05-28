@@ -812,6 +812,7 @@ body {
     .title {
         font-size: 30px;
         margin-bottom: 18px;
+        font-family: "Lora", serif;
     }
 
     .pre-title {
