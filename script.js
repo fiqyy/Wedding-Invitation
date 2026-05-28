@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const envelope = document.getElementById('envelope');
     const stamp = document.getElementById('stamp');
+    const envelopeTitle = document.querySelector('.envelope-title'); // Add reference to envelope title
     const optionBoxes = document.querySelectorAll('.option-box');
     const pages = document.querySelectorAll('.page');
     const closeBtn = document.getElementById('close-btn');
@@ -18,6 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
     stamp.addEventListener('click', () => {
         envelope.classList.add('open');
     });
+
+    // Open envelope when clicking the title
+    if (envelopeTitle) {
+        envelopeTitle.addEventListener('click', () => {
+            envelope.classList.add('open');
+        });
+    }
 
     // Close envelope when clicking the close button
     closeBtn.addEventListener('click', () => {
@@ -100,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const days = Math.floor(difference / (1000 * 60 * 60 * 24));
             const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+            const seconds = Math.floor((difference % (1000 * 60)) / (1000));
 
             const daysEl = document.getElementById('cd-days');
             if (daysEl) {
