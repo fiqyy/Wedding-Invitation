@@ -760,7 +760,7 @@ body {
 
     .envelope {
         width: min(100%, 520px);
-        max-width: 480px;
+        max-width: 430px;
         height: 270px;
         margin: 0 auto;
     }
