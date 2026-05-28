@@ -761,7 +761,7 @@ body {
     .envelope {
         width: min(100%, 520px);
         max-width: 520px;
-        height: 300px;
+        height: 350px;
         margin: 0 auto;
     }
 
