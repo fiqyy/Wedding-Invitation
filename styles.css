@@ -895,7 +895,7 @@ body {
     */
 
     .envelope.open .letter {
-        transform: translateY(-110px);
+        transform: translateY(-242px);
         height: 520px;
         min-height: 520px;
     }
