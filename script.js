@@ -30,6 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Close envelope when clicking the close button
     closeBtn.addEventListener('click', () => {
         envelope.classList.remove('open');
+        popupContainer.classList.remove('active');
+        document.querySelector('.letter-content').classList.remove('popup-active');
     });
 
     // Handle option box clicks
@@ -55,12 +57,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Show popup
             popupContainer.classList.add('active');
+            document.querySelector('.letter-content').classList.add('popup-active');
         });
     });
 
     // Close popup
     popupCloseBtn.addEventListener('click', () => {
         popupContainer.classList.remove('active');
+        document.querySelector('.letter-content').classList.remove('popup-active');
     });
 
     // Show or hide the plus one input
