@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Countdown Timer Logic
-    const targetDate = new Date('August 25, 2026 00:00:00').getTime();
+    const targetDate = new Date('August 15, 2026 00:00:00').getTime();
 
     function updateCountdown() {
         const now = new Date().getTime();
