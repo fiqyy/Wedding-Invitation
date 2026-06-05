@@ -894,7 +894,6 @@ body {
 @media (max-width: 768px) {
     .invitation-wrapper {
         padding: 12px;
-        margin-top: 40px;
     }
 
     .header-stamp {
@@ -991,11 +990,11 @@ body {
     }
 
     .option-box {
-        padding: 6px 8px;
+        padding: 4px 6px;
     }
 
     .option-title {
-        font-size: 15px;
+        font-size: 14px;
         line-height: 1.2;
     }
 
