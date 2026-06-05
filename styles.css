@@ -1,8 +1,10 @@
 :root {
-    --primary-dark: linear-gradient(135deg, 
-    rgba(65, 51, 51, 0.15) 0%, 
-    rgba(79, 61, 63, 0.1) 50%, 
-    rgba(179, 120, 93, 0.05) 100%); /* Subtle gradient for texture */;
+    --primary-dark: linear-gradient(135deg,
+            rgba(65, 51, 51, 0.15) 0%,
+            rgba(79, 61, 63, 0.1) 50%,
+            rgba(179, 120, 93, 0.05) 100%);
+    /* Subtle gradient for texture */
+    ;
     --secondary-dark: #4f3d3f;
     --accent-brown: #b3785d;
     --light-gray: #f2e7df;
@@ -90,7 +92,8 @@ body {
     width: min(100%, 650px);
     max-width: 640px;
     height: 420px;
-    background-color: transparent; /* Make the envelope background transparent */
+    background-color: transparent;
+    /* Make the envelope background transparent */
     border: none;
     border-radius: 0px;
     transition: transform 2s ease-in-out;
@@ -271,9 +274,11 @@ body {
     0% {
         box-shadow: 0 8px 25px rgba(39, 43, 54, 0.7), 0 0 0 0 rgba(212, 175, 55, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.4);
     }
+
     70% {
         box-shadow: 0 8px 25px rgba(39, 43, 54, 0.7), 0 0 0 15px rgba(212, 175, 55, 0), inset 0 0 28px rgba(255, 255, 255, 0.8);
     }
+
     100% {
         box-shadow: 0 8px 25px rgba(39, 43, 54, 0.7), 0 0 0 0 rgba(212, 175, 55, 0), inset 0 0 15px rgba(255, 255, 255, 0.4);
     }
@@ -318,13 +323,16 @@ body {
 }
 
 .envelope-title:hover {
-    text-shadow: 0 6px 18px rgba(39, 43, 54, 1); /* Enhanced shadow on hover */
-    transform: scale(1.05); /* Slight scaling effect on hover */
+    text-shadow: 0 6px 18px rgba(39, 43, 54, 1);
+    /* Enhanced shadow on hover */
+    transform: scale(1.05);
+    /* Slight scaling effect on hover */
 }
 
 .envelope.open .envelope-title {
     opacity: 0;
-    pointer-events: none; /* Disable interactions when envelope is open */
+    pointer-events: none;
+    /* Disable interactions when envelope is open */
 }
 
 /*
@@ -462,6 +470,7 @@ body {
     text-shadow: 0 4px 12px rgba(255, 255, 255, 0.35);
     font-family: 'Lora', serif;
 }
+
 .namestitle {
     text-align: center;
     font-size: 32px;
@@ -489,7 +498,7 @@ body {
     align-items: center;
     cursor: pointer;
     transition: all 0.4s ease;
-    padding: 10px 12px;
+    padding: 10px 10px;
     text-align: center;
     font-family: inherit;
     width: 100%;
@@ -558,11 +567,11 @@ body {
 }
 
 /* Popup Container */
-.letter-content > *:not(.popup-container) {
+.letter-content>*:not(.popup-container) {
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.letter-content.popup-active > *:not(.popup-container) {
+.letter-content.popup-active>*:not(.popup-container) {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -684,27 +693,36 @@ body {
 }
 
 @keyframes shimmer {
-    0%, 100% {
+
+    0%,
+    100% {
         box-shadow: 0 0 20px rgba(215, 215, 214, 0.3);
     }
+
     50% {
         box-shadow: 0 0 40px rgba(215, 215, 214, 0.6);
     }
 }
 
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0px);
     }
+
     50% {
         transform: translateY(-8px);
     }
 }
 
 @keyframes pulse-border {
-    0%, 100% {
+
+    0%,
+    100% {
         border-color: rgba(160, 138, 129, 0.4);
     }
+
     50% {
         border-color: rgba(160, 138, 129, 0.8);
     }
@@ -968,16 +986,16 @@ body {
 
     .options-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-        margin-top: 15px;
+        gap: 6px;
+        margin-top: 5px;
     }
 
     .option-box {
-        padding: 5px 8px;
+        padding: 8px 8px;
     }
 
     .option-title {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .popup-box {
