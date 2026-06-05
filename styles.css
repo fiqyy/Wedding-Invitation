@@ -991,11 +991,12 @@ body {
     }
 
     .option-box {
-        padding: 8px 8px;
+        padding: 6px 8px;
     }
 
     .option-title {
         font-size: 15px;
+        line-height: 1.2;
     }
 
     .popup-box {
