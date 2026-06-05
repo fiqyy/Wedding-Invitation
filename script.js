@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const envelope = document.getElementById('envelope');
     const stamp = document.getElementById('stamp');
     const envelopeTitle = document.querySelector('.envelope-title'); // Add reference to envelope title
+    const wrapper = document.querySelector('.invitation-wrapper');
     const optionBoxes = document.querySelectorAll('.option-box');
     const pages = document.querySelectorAll('.page');
     const closeBtn = document.getElementById('close-btn');
@@ -18,18 +19,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // Open envelope when clicking the stamp
     stamp.addEventListener('click', () => {
         envelope.classList.add('open');
+        wrapper.classList.add('open');
     });
 
     // Open envelope when clicking the title
     if (envelopeTitle) {
         envelopeTitle.addEventListener('click', () => {
             envelope.classList.add('open');
+            wrapper.classList.add('open');
         });
     }
 
     // Close envelope when clicking the close button
     closeBtn.addEventListener('click', () => {
         envelope.classList.remove('open');
+        wrapper.classList.remove('open');
         popupContainer.classList.remove('active');
         document.querySelector('.letter-content').classList.remove('popup-active');
     });
