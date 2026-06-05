@@ -876,6 +876,7 @@ body {
 @media (max-width: 768px) {
     .invitation-wrapper {
         padding: 12px;
+        margin-top: 40px;
     }
 
     .header-stamp {
@@ -972,11 +973,11 @@ body {
     }
 
     .option-box {
-        padding: 8px 10px;
+        padding: 5px 8px;
     }
 
     .option-title {
-        font-size: 13px;
+        font-size: 16px;
     }
 
     .popup-box {
