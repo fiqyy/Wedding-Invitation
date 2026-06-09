@@ -8,7 +8,7 @@
     --secondary-dark: #4f3d3f;
     --accent-brown: #b3785d;
     --light-gray: #f2e7df;
-    --off-white: #f9f1eb;
+    --off-white: #fad9bf;
     --subtle-gold: #d4af37;
     --letter-text: #ffffff;
     --title-text: #7f4c3b;
@@ -80,7 +80,7 @@ body {
 .header-stamp-text {
     font-family: 'Great Vibes', cursive;
     font-size: 34px;
-    color: var(--off-white);
+    color: #dfceb8;
     margin-top: 12px;
     text-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
     letter-spacing: 1.5px;
