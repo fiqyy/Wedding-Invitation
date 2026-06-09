@@ -894,10 +894,11 @@ body {
 @media (max-width: 768px) {
     .invitation-wrapper {
         padding: 12px;
+        margin-top: -55px;
     }
 
     .header-stamp {
-        margin-bottom: 15px;
+        margin-bottom: 5px;
     }
 
     .header-stamp-img {
